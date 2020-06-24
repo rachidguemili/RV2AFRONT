@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Doctor } from 'src/app/models/doctor';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.model.username === 'rv2a') {
+    if (this.model.identifiant === 'Louis.Renard') {
       this.router.navigate(['home']);
     } else {
       alert('Identifiants incorrects');

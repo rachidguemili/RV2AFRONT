@@ -12,7 +12,9 @@ import { SignUpComponent } from './pages/login/sign-up/sign-up.component';
 import { PatientListComponent } from './pages/home/patient-list/patient-list.component';
 import { ChatComponent } from './pages/home/patient-list/chat/chat.component';
 
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { ChatComponent } from './pages/home/patient-list/chat/chat.component';
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
