@@ -1,9 +1,10 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Bienvenue sur Doc'Message</span>
+    <a [routerLink]="['']">
+      <h1>Bienvenue sur Doc'Message</h1>
+    </a>
     <span class="logo-header"></span>
-    <a [routerLink]="['sign-up']" routerLinkActive="router-link-active"><span class="material-icons"
-        id="logo-header">medical_services</span></a>
+    <a [routerLink]="['sign-up']"><span class="material-icons" id="logo-header">medical_services</span></a>
   </mat-toolbar-row>
 </mat-toolbar>
 

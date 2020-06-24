@@ -1,63 +1,68 @@
 <form (ngSubmit)="signup.valid && onSubmit()" #signup="ngForm">
   <div>
-    <label for="firstname">Prénom :
-    </label>
-    <input name="firstname" type="text" [(ngModel)]="model.firstname" #firstname="ngModel" minlength="3" maxlength="15"
-      required>
+    <mat-form-field>
+      <mat-label for="firstname">Prénom</mat-label>
+      <input matInput name="firstname" type="text" [(ngModel)]="model.firstname" #firstname="ngModel" minlength="3"
+        maxlength="15" required>
+    </mat-form-field>
   </div>
   <!-- Message d'erreurs -->
-  <div *ngIf="signup.submitted && firstname.errors">
+  <mat-error *ngIf="signup.submitted && firstname.errors">
     <span *ngIf="firstname.errors?.required">Le prénom est requis</span>
     <span *ngIf="firstname.errors?.minlength">La longueur minimale doit être supérieure à 3 caractères</span>
     <span *ngIf="firstname.errors?.maxlength">La longueur maximale doit être inférieure à 15 caractères</span>
-  </div>
+  </mat-error>
   <div>
-    <label for="lastname">Nom :
-    </label>
-    <input name="lastname" type="text" [(ngModel)]="model.lastname" #lastname="ngModel" minlength="3" maxlength="15"
-      required>
+    <mat-form-field>
+      <mat-label for="lastname">Nom</mat-label>
+      <input matInput name="lastname" type="text" [(ngModel)]="model.lastname" #lastname="ngModel" minlength="3"
+        maxlength="15" required>
+    </mat-form-field>
   </div>
-  <div *ngIf="signup.submitted && lastname.errors">
+  <mat-error *ngIf="signup.submitted && lastname.errors">
     <span *ngIf="lastname.errors?.required">Le nom est requis</span>
     <span *ngIf="lastname.errors?.minlength">La longueur minimale doit être supérieure à 3 caractères</span>
     <span *ngIf="lastname.errors?.maxlength">La longueur maximale doit être inférieure à 15 caractères</span>
-  </div>
+  </mat-error>
 
   <div>
-    <label for="username">Username :
-    </label>
-    <input name="username" type="text" [(ngModel)]="model.username" #username="ngModel" minlength="3" maxlength="15"
-      required>
+    <mat-form-field>
+      <mat-label for="identifiant">Identifiant</mat-label>
+      <input matInput name="identifiant" type="text" [(ngModel)]="model.identifiant" #identifiant="ngModel"
+        minlength="3" maxlength="15" required>
+    </mat-form-field>
   </div>
-  <div *ngIf="signup.submitted && username.errors">
-    <span *ngIf="username.errors?.required">Le nom d'utilisateur est requis</span>
-    <span *ngIf="username.errors?.minlength">La longueur minimale doit être supérieure à 3 caractères</span>
-    <span *ngIf="username.errors?.maxlength">La longueur maximale doit être inférieure à 15 caractères</span>
-  </div>
+  <mat-error *ngIf="signup.submitted && identifiant.errors">
+    <span *ngIf="identifiant.errors?.required">Le nom d'utilisateur est requis</span>
+    <span *ngIf="identifiant.errors?.minlength">La longueur minimale doit être supérieure à 3 caractères</span>
+    <span *ngIf="identifiant.errors?.maxlength">La longueur maximale doit être inférieure à 15 caractères</span>
+  </mat-error>
 
   <div>
-    <label for="password">Mot de passe :
-    </label>
-    <input name="password" type="password" [(ngModel)]="model.password" #password="ngModel" required maxlength="30"
-      minlength="7">
+    <mat-form-field>
+      <mat-label for="password">Mot de passe</mat-label>
+      <input matInput name="password" type="password" [(ngModel)]="model.password" #password="ngModel" required
+        maxlength="30" minlength="7">
+    </mat-form-field>
   </div>
-  <div *ngIf="signup.submitted && password.errors">
+  <mat-error *ngIf="signup.submitted && password.errors">
     <span *ngIf="password.errors?.required">Le mot de passe est requis</span>
     <span *ngIf="password.errors?.minlength">La longueur minimale doit être supérieure à 7 caractères</span>
     <span *ngIf="password.errors?.maxlength">La longueur maximale doit être inférieure à 30 caractères</span>
-  </div>
+  </mat-error>
 
   <div>
-    <label for="mail">Adresse email :
-    </label>
-    <input name="mail" type="email" [(ngModel)]="model.mail" #mail="ngModel" required email>
+    <mat-form-field>
+      <mat-label for="mail">Email</mat-label>
+      <input matInput name="mail" type="email" [(ngModel)]="model.mail" #mail="ngModel" required email>
+    </mat-form-field>
   </div>
-  <div *ngIf="signup.submitted && mail.errors">
+  <mat-error *ngIf="signup.submitted && mail.errors">
     <span *ngIf="mail.errors.required">Le champ email est requis</span>
-  </div>
+  </mat-error>
 
-  <button type="submit">
+  <button mat-raised-button color="primary" type="submit">
     Enregistrer
   </button>
 </form>
-<a routerLink=""><button>Retour</button></a>
+<a routerLink=""><button mat-raised-button color="primary">Retour</button></a>
