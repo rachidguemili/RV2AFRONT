@@ -20,8 +20,7 @@ export class LoginComponent implements OnInit {
     if (this.model.username === 'rv2a') {
       this.router.navigate(['home']);
     } else {
-      alert('Vos identifiants sont incorrects');
+      alert('Identifiants incorrects');
     }
   }
-
 }

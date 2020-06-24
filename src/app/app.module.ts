@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SignUpComponent } from './pages/login/sign-up/sign-up.component';
 import { PatientListComponent } from './pages/home/patient-list/patient-list.component';
+import { ChatComponent } from './pages/home/patient-list/chat/chat.component';
 
 
 
@@ -18,7 +19,8 @@ import { PatientListComponent } from './pages/home/patient-list/patient-list.com
     AppComponent,
     LoginComponent,
     SignUpComponent,
-    PatientListComponent
+    PatientListComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

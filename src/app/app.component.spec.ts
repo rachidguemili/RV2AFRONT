@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'rv2a'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rv2a');
+    expect(app.title).toEqual('Doc\'Message');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('rv2a app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Doc\'Message app is running!');
   });
 });
