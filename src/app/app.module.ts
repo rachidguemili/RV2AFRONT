@@ -15,6 +15,9 @@ import { ChatComponent } from './pages/home/patient-list/chat/chat.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { PatientDetailsComponent } from './pages/home/patient-list/patient-details/patient-details.component';
+import { ChatHistoricComponent } from './pages/home/patient-list/patient-details/chat-historic/chat-historic.component';
+import { SmsEditorComponent } from './pages/home/patient-list/patient-details/sms-editor/sms-editor.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     TableComponent,
     LoginComponent,
     SignUpComponent,
-    ChatComponent
+    ChatComponent,
+    PatientDetailsComponent,
+    ChatHistoricComponent,
+    SmsEditorComponent
   ],
   imports: [
     BrowserModule,
