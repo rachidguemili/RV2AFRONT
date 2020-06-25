@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Doctor } from 'src/app/models/doctor';
+import { Doctor } from 'src/app/model/doctor';
 import { Router } from '@angular/router';
 
-
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class LoginComponent implements OnInit {
-
-  constructor(private router: Router) { }
+export class RegisterComponent implements OnInit {
 
   model: Doctor = new Doctor();
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -25,4 +23,5 @@ export class LoginComponent implements OnInit {
       alert('Identifiants incorrects');
     }
   }
+
 }
