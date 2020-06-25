@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.model.identifiant === 'Louis.Renard') {
+    if (this.model.identifiant === 'toto') {
       this.router.navigate(['home']);
     } else {
       alert('Identifiants incorrects');
