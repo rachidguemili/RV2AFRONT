@@ -1,26 +1,24 @@
 <div class="sms-container">
-  <div class="row">
-    <label for="smsType">Choose an sms type: </label>
-    <select name="smsType" id="smsType">
+    <div class="row">
+        <label class="type-label" for="smsType">Choose an sms type: </label>
+        <br>
+        <select class="sms-type" name="smsType" id="smsType">
       <option value="rdv">Rdv</option>
       <option value="prescription">Prescription</option>
     </select>
-  </div>
-
-  <!-- <div class="row">
-        <label for="fname">Phone Number: </label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}">
+        <br>
     </div>
-    <div class="row">
-        <label for="smsContent">Sms Content:</label>
+    <form (ngSubmit)='create()' #form="ngForm">
+        <mat-form-field>
+            <input matInput class="sms-type" type="text" [(ngModel)]='sms.to' name="destinataire">
+        </mat-form-field>
 
-        <textarea id="smsContent" name="smsContent" rows="4" cols="50"> 
-        </textarea>
-    </div> -->
-  <form (ngSubmit)='create()' #form="ngForm">
-    <input type="text" [(ngModel)]='sms.to' name="destinataire">
-    <input type="text" [(ngModel)]='sms.message' name="message">
+        <mat-form-field>
+            <textarea class="sms-type" rows="4" cols="50" type="text" [(ngModel)]='sms.message' name="message"></textarea>
+        </mat-form-field>
 
-    <button type="submit">Envoyer</button>
-  </form>
+        <div>
+            <button _ngcontent-fxv-c10 outlined mat-stroked-button="" color="primary" type="submit">Send</button>
+        </div>
+    </form>
 </div>

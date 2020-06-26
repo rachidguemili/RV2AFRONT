@@ -3,4 +3,6 @@ export class Patient {
     firstname: string;
     lastname: string;
     socialSecurityNumber: number;
+
+    phoneNumber: string;
 }
