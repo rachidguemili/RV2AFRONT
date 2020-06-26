@@ -11,9 +11,9 @@ import { TableComponent } from './pages/home/patient-list/table/table.component'
 
 const routes: Routes = [
   { path: '', component: RegisterComponent },
-  { path: 'home', component: TableComponent},
-  { path: 'details', component: PatientDetailsComponent },
-  { path: 'chat', component: ChatComponent },
+  { path: 'home', component: TableComponent },
+  { path: 'detail/:id', component: PatientDetailsComponent },
+  { path: 'chat/:id', component: ChatComponent },
 
 
 
