@@ -10,12 +10,15 @@
     </div>
     <form (ngSubmit)='create()' #form="ngForm">
         <mat-form-field>
+            <mat-label>Destinataire</mat-label>
             <input matInput class="sms-type" type="text" [(ngModel)]='sms.to' name="destinataire">
         </mat-form-field>
 
-        <mat-form-field>
-            <textarea class="sms-type" rows="4" cols="50" type="text" [(ngModel)]='sms.message' name="message"></textarea>
+        <mat-form-field appearance="fill">
+            <mat-label>Message</mat-label>
+            <textarea matInput></textarea>
         </mat-form-field>
+
 
         <div>
             <button _ngcontent-fxv-c10 outlined mat-stroked-button="" color="primary" type="submit">Send</button>
