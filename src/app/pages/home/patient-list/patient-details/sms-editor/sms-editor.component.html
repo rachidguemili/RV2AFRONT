@@ -1,27 +1,19 @@
 <div class="sms-container">
     <div class="row">
-        <label class="type-label" for="smsType">Choose an sms type: </label>
-        <br>
-        <select class="sms-type" name="smsType" id="smsType">
-      <option value="rdv">Rdv</option>
-      <option value="prescription">Prescription</option>
-    </select>
-        <br>
+      <br>
     </div>
     <form (ngSubmit)='create()' #form="ngForm">
-        <mat-form-field>
-            <mat-label>Destinataire</mat-label>
-            <input matInput class="sms-type" type="text" [(ngModel)]='sms.to' name="destinataire">
-        </mat-form-field>
-
+      <div>
+      </div>
+      <div>
         <mat-form-field appearance="fill">
-            <mat-label>Message</mat-label>
-            <textarea matInput></textarea>
+          <mat-label>Message</mat-label>
+          <textarea matInput></textarea>
         </mat-form-field>
-
-
-        <div>
-            <button _ngcontent-fxv-c10 outlined mat-stroked-button="" color="primary" type="submit">Send</button>
-        </div>
+      </div>
+      <br>
+      <div>
+        <button _ngcontent-fxv-c10 outlined mat-stroked-button="" color="primary" type="submit">Send</button>
+      </div>
     </form>
-</div>
+  </div>

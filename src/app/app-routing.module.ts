@@ -14,10 +14,10 @@ const routes: Routes = [
   { path: 'home', component: TableComponent },
   { path: 'detail/:id', component: PatientDetailsComponent },
   { path: 'chat/:id', component: ChatComponent },
-
-
-
 ];
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

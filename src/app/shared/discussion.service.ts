@@ -6,7 +6,7 @@ import { ChatService } from './chat.service';
   providedIn: 'root'
 })
 export class DiscussionService {
-  private url = 'http://localhost:8082/';
+  private url = 'http://localhost:8081/';
 
   constructor(private http: HttpClient ,private chat : ChatService) { }
 

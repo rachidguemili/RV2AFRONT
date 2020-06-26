@@ -7,7 +7,7 @@ import { Sms } from 'src/app/model/sms';
 })
 export class SmsService {
   constructor(private http: HttpClient) { }
-  private static BASE_URL = 'http://localhost:8080/sms';
+  private static BASE_URL = 'http://localhost:8081/sms';
   public getAllSms() {
     return this.http.get<Sms>(SmsService.BASE_URL);
   }
