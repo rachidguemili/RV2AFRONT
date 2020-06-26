@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.model.identifiant === 'toto') {
+    if (this.model.identifiant === 'Doctolib') {
       this.router.navigate(['home']);
     } else {
       alert('Identifiants incorrects');

@@ -10,11 +10,11 @@ import { TableComponent } from './pages/home/patient-list/table/table.component'
 
 
 const routes: Routes = [
-  { path: '', component: ChatComponent },
-  { path: 'login', component: RegisterComponent },
-  { path: 'chat', component: ChatComponent },
+  { path: '', component: RegisterComponent },
   { path: 'home', component: TableComponent},
-  { path: 'details', component: PatientDetailsComponent }
+  { path: 'details', component: PatientDetailsComponent },
+  { path: 'chat', component: ChatComponent },
+
 
 
 ];
